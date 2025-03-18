@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Define log file location
-LOG_DIR="/var/log/system_monitor"
+# Use the current directory for storing logs
+LOG_DIR="$(pwd)/system_monitor"
 LOG_FILE="$LOG_DIR/sys_metrics_$(date +'%Y-%m-%d_%H-%M-%S').log"
 
 # Ensure the log directory exists
