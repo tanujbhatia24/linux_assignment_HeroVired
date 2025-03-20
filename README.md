@@ -223,7 +223,9 @@ sudo tar -tzf /backups/nginx_backup_$(date +"%Y-%m-%d").tar.gz
 <img width="395" alt="image" src="https://github.com/user-attachments/assets/d899d84c-2416-427c-af3b-93356ee4c2bc" />
 
 - Cron job schedule and backup logs.</br>
-<img width="533" alt="image" src="https://github.com/user-attachments/assets/e266f827-1931-42e8-9768-90106c8a9c54" />
+<img width="533" alt="image" src="https://github.com/user-attachments/assets/e266f827-1931-42e8-9768-90106c8a9c54" /></br>
+<img width="546" alt="image" src="https://github.com/user-attachments/assets/d9929910-e9b2-48a0-bcc4-25a105d25b0f" />
+
 
 
 ---
