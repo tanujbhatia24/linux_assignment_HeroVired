@@ -210,11 +210,22 @@ sudo tar -tzf /backups/nginx_backup_$(date +"%Y-%m-%d").tar.gz
 - System monitoring outputs.
 <img width="389" alt="image" src="https://github.com/user-attachments/assets/79ac1ff4-1312-4bd2-bf48-877604c734e4" />
 <img width="701" alt="image" src="https://github.com/user-attachments/assets/6f91836b-be12-4e20-9adb-04ebf2b7e479" />
-<img width="939" alt="image" src="https://github.com/user-attachments/assets/ec102642-175c-4467-a45f-b836a80707e4" />
+<img width="939" alt="image" src="https://github.com/user-attachments/assets/ec102642-175c-4467-a45f-b836a80707e4" /> </br>
+
+
+- User management terminal commands.</br>
+<img width="337" alt="image" src="https://github.com/user-attachments/assets/0c9ae9b5-bda5-467f-b74d-2b892b842215" /> </br>
+<img width="521" alt="image" src="https://github.com/user-attachments/assets/fde1b405-4e37-4be1-aaaa-b0c3d95116fc" /> </br>
+<img width="368" alt="image" src="https://github.com/user-attachments/assets/db1d352f-895b-4c81-8a2b-9129e13a298e" /> </br>
+<img width="457" alt="image" src="https://github.com/user-attachments/assets/9a0a1728-81f7-4556-a78e-a16376978296" /> </br>
+<img width="539" alt="image" src="https://github.com/user-attachments/assets/a7826b9b-2b7f-42fb-bb47-069e03c541b2" />
 
 
 
-- User management terminal commands.
+
+
+
+
 - Cron job schedule and backup logs.
 
 ---
