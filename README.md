@@ -218,7 +218,13 @@ sudo tar -tzf /backups/nginx_backup_$(date +"%Y-%m-%d").tar.gz
 <img width="521" alt="image" src="https://github.com/user-attachments/assets/fde1b405-4e37-4be1-aaaa-b0c3d95116fc" /> </br>
 <img width="368" alt="image" src="https://github.com/user-attachments/assets/db1d352f-895b-4c81-8a2b-9129e13a298e" /> </br>
 <img width="457" alt="image" src="https://github.com/user-attachments/assets/9a0a1728-81f7-4556-a78e-a16376978296" /> </br>
-<img width="539" alt="image" src="https://github.com/user-attachments/assets/a7826b9b-2b7f-42fb-bb47-069e03c541b2" />
+<img width="539" alt="image" src="https://github.com/user-attachments/assets/a7826b9b-2b7f-42fb-bb47-069e03c541b2" /> </br>
+<img width="311" alt="image" src="https://github.com/user-attachments/assets/1174191e-e73a-44a4-ad81-7f77cd9fa0a3" /> </br>
+<img width="395" alt="image" src="https://github.com/user-attachments/assets/d899d84c-2416-427c-af3b-93356ee4c2bc" />
+
+
+
+
 
 
 
