@@ -1,0 +1,75 @@
+------ System Metrics: Thu Mar 20 16:57:49 UTC 2025 ------
+
+CPU and Memory Usage:
+top - 16:57:50 up  7:58,  1 user,  load average: 0.06, 0.03, 0.04
+Tasks:  34 total,   1 running,  33 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  1.1 sy,  0.0 ni, 97.8 id,  1.1 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :   3844.0 total,   3262.6 free,    603.4 used,    184.9 buff/cache     
+MiB Swap:   1024.0 total,   1024.0 free,      0.0 used.   3240.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0   21760  13028   9588 S   0.0   0.3   0:05.45 systemd
+      2 root      20   0    2616   1440   1320 S   0.0   0.0   0:03.60 init-sy+
+      7 root      20   0    2616    132    132 S   0.0   0.0   0:00.00 init
+     55 root      19  -1   66840  16184  14936 S   0.0   0.4   0:11.17 systemd+
+     95 root      20   0   24408   6608   4904 S   0.0   0.2   0:07.49 systemd+
+    153 systemd+  20   0   21452  11820   9624 S   0.0   0.3   0:01.17 systemd+
+    154 systemd+  20   0   91020   6520   5668 S   0.0   0.2   0:00.92 systemd+
+    163 root      20   0    4236   2612   2364 S   0.0   0.1   0:00.47 cron
+    164 message+  20   0    9584   5224   4684 S   0.0   0.1   0:01.69 dbus-da+
+    178 root      20   0   17976   8240   7220 S   0.0   0.2   0:00.71 systemd+
+    181 root      20   0 1978444  24164  10280 S   0.0   0.6   0:02.54 wsl-pro+
+    189 root      20   0    3160   1152   1064 S   0.0   0.0   0:00.01 agetty
+    191 root      20   0   11156    972      0 S   0.0   0.0   0:00.00 nginx
+    193 www-data  20   0   12880   4228   2968 S   0.0   0.1   0:00.00 nginx
+    194 www-data  20   0   12880   4228   2968 S   0.0   0.1   0:00.00 nginx
+    195 www-data  20   0   12880   4228   2968 S   0.0   0.1   0:00.00 nginx
+    196 www-data  20   0   12880   4228   2968 S   0.0   0.1   0:00.00 nginx
+    198 www-data  20   0   12880   4228   2968 S   0.0   0.1   0:00.00 nginx
+    199 www-data  20   0   12880   4228   2968 S   0.0   0.1   0:00.00 nginx
+    200 www-data  20   0   12880   4228   2968 S   0.0   0.1   0:00.00 nginx
+    201 www-data  20   0   12880   4228   2968 S   0.0   0.1   0:00.00 nginx
+    214 syslog    20   0  222508   7296   4464 S   0.0   0.2   0:01.99 rsyslogd
+    217 root      20   0    3116   1188   1100 S   0.0   0.0   0:00.01 agetty
+    230 root      20   0  107008  22296  12960 S   0.0   0.6   0:00.24 unatten+
+    344 root      20   0    2620    120      0 S   0.0   0.0   0:00.00 Session+
+    345 root      20   0    2620    124      0 S   0.0   0.0   0:00.35 Relay(3+
+    346 tanujbh+  20   0    7472   6740   3592 S   0.0   0.2   0:01.09 bash
+    347 root      20   0    6688   4540   3760 S   0.0   0.1   0:00.01 login
+    436 tanujbh+  20   0   20256  11324   9248 S   0.0   0.3   0:00.44 systemd
+    437 tanujbh+  20   0   21148   1728      0 S   0.0   0.0   0:00.00 (sd-pam)
+    450 tanujbh+  20   0    6192   5196   3504 S   0.0   0.1   0:00.02 bash
+    624 polkitd   20   0  308160   9200   6512 S   0.0   0.2   0:00.14 polkitd
+   4387 tanujbh+  20   0    4752   3368   3092 S   0.0   0.1   0:00.00 system_+
+   4392 tanujbh+  20   0    9284   4928   3048 R   0.0   0.1   0:00.00 top
+
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+none            1.9G     0  1.9G   0% /usr/lib/modules/5.15.167.4-microsoft-standard-WSL2
+none            1.9G  4.0K  1.9G   1% /mnt/wsl
+drivers         238G  131G  107G  56% /usr/lib/wsl/drivers
+/dev/sdc       1007G  2.1G  954G   1% /
+none            1.9G  104K  1.9G   1% /mnt/wslg
+none            1.9G     0  1.9G   0% /usr/lib/wsl/lib
+rootfs          1.9G  2.2M  1.9G   1% /init
+none            1.9G  512K  1.9G   1% /run
+none            1.9G     0  1.9G   0% /run/lock
+none            1.9G     0  1.9G   0% /run/shm
+tmpfs           4.0M     0  4.0M   0% /sys/fs/cgroup
+none            1.9G   76K  1.9G   1% /mnt/wslg/versions.txt
+none            1.9G   76K  1.9G   1% /mnt/wslg/doc
+C:\             238G  131G  107G  56% /mnt/c
+D:\             932G   81G  851G   9% /mnt/d
+tmpfs           385M   16K  385M   1% /run/user/1000
+
+Top 10 Memory-Intensive Processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         181  0.0  0.6 1978444 24164 ?       Ssl  08:59   0:02 /usr/libexec/wsl-pro-service -vv
+root         230  0.0  0.5 107008 22296 ?        Ssl  08:59   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root          55  0.0  0.4  66840 16184 ?        S<s  08:59   0:11 /usr/lib/systemd/systemd-journald
+root           1  0.0  0.3  21760 13028 ?        Ss   08:59   0:05 /sbin/init
+systemd+     153  0.0  0.3  21452 11820 ?        Ss   08:59   0:01 /usr/lib/systemd/systemd-resolved
+tanujbh+     436  0.0  0.2  20256 11324 ?        Ss   08:59   0:00 /usr/lib/systemd/systemd --user
+polkitd      624  0.0  0.2 308160  9200 ?        Ssl  09:00   0:00 /usr/lib/polkit-1/polkitd --no-debug
+root         178  0.0  0.2  17976  8240 ?        Ss   08:59   0:00 /usr/lib/systemd/systemd-logind
+syslog       214  0.0  0.1 222508  7296 ?        Ssl  08:59   0:01 /usr/sbin/rsyslogd -n -iNONE
