@@ -208,6 +208,12 @@ sudo tar -tzf /backups/nginx_backup_$(date +"%Y-%m-%d").tar.gz
 
 ## **Screenshots:**
 - System monitoring outputs.
+<img width="389" alt="image" src="https://github.com/user-attachments/assets/79ac1ff4-1312-4bd2-bf48-877604c734e4" />
+<img width="701" alt="image" src="https://github.com/user-attachments/assets/6f91836b-be12-4e20-9adb-04ebf2b7e479" />
+<img width="939" alt="image" src="https://github.com/user-attachments/assets/ec102642-175c-4467-a45f-b836a80707e4" />
+
+
+
 - User management terminal commands.
 - Cron job schedule and backup logs.
 
