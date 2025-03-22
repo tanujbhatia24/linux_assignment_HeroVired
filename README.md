@@ -1,7 +1,17 @@
 # TechCorp DevOps Environment Setup Report
-
-## **Prepared by:** Tanuj Bhatia    
+   
 ## **Project:** Secure, Monitored, and Well-Maintained Development Environment  
+## Repository Structure
+**🗂️ Directories**
+- **backups**: Directory containing backup configurations for web servers.
+- **system_monitor_log**: Directory storing log files generated from system monitoring activities.
+  
+**📄 Files**
+- **system_monitor.sh**: Script for monitoring system resources such as CPU, memory, and disk usage.
+- **git_log_push.sh**: Script to log and push Git changes to the repository.
+- **apache_backup.sh**: Script for backing up Apache server configuration and document root.
+- **nginx_backup.sh**: Script for backing up Nginx server configuration and document root.
+- **README.md**: Documentation file providing details about the repository structure, purpose, and usage.
 ---
 
 ## **Task 1: System Monitoring Setup**
@@ -258,21 +268,27 @@ tar -tf /backups/nginx_backup_YYYY-MM-DD.tar.gz
 ---
 
 ## **Screenshots:**
-- System monitoring outputs.</br>
+- Task 1: System Monitoring Setup.</br>
 <img width="389" alt="image" src="https://github.com/user-attachments/assets/79ac1ff4-1312-4bd2-bf48-877604c734e4" /> </br>
+<img width="815" alt="image" src="https://github.com/user-attachments/assets/a23083a4-577d-40f0-accf-a4e207f55a49" /> </br>
 
-- User management terminal commands.</br>
+- Task 2: User Management and Access Control.</br>
 <img width="540" alt="image" src="https://github.com/user-attachments/assets/d383cb6a-8a77-475e-aa88-661885d7e832" /> </br>
 <img width="501" alt="image" src="https://github.com/user-attachments/assets/c43b9941-d81e-4db4-a31b-357d98e10193" /> </br>
 <img width="560" alt="image" src="https://github.com/user-attachments/assets/9d5a7ae9-87a7-4bf2-a75d-355d623a33a9" /> </br>
 <img width="458" alt="image" src="https://github.com/user-attachments/assets/5bb97753-3586-4bb6-ba3a-d2032e2a0fb6" /> </br>
 <img width="557" alt="image" src="https://github.com/user-attachments/assets/0a3ba265-126e-435e-afcf-75613bafd648" /> </br>
 
-- Cron job schedule and backup logs.</br>
+- Task 3: Backup Configuration for Web Servers.</br>
 <img width="797" alt="image" src="https://github.com/user-attachments/assets/0db54125-63c9-4317-8640-5ea88f55359c" /> </br>
 <img width="632" alt="image" src="https://github.com/user-attachments/assets/25bcb751-d3f0-463e-89ba-84a9a8a58fac" /> </br>
 <img width="734" alt="image" src="https://github.com/user-attachments/assets/17d046fb-9c70-48fe-8fb4-cd74e3240cef" /> </br>
 ---
 
-✅ **End of Report**
+## Get in Touch
+Have any questions or suggestions? I'd love to hear from you! Feel free to reach out:<br>
+📧 Email: tanujbhatia0001@gmail.com<br>
+Looking forward to connecting! 🚀
 
+✅ **End of Report**
+---
