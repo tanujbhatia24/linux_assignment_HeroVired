@@ -24,7 +24,7 @@ sudo apt install htop -y
 #!/bin/bash
 
 # Directory for storing logs
-LOG_DIR="$(pwd)/system_monitor"
+LOG_DIR="$(pwd)/system_monitor_log"
 LOG_FILE="$LOG_DIR/sys_metrics_$(date +'%Y-%m-%d_%H-%M-%S').log"
 
 # Ensure the log directory exists
@@ -52,8 +52,12 @@ find "$LOG_DIR" -type f -name "*.log" -mtime +7 -exec rm {} \;
 
 echo "Log saved to $LOG_FILE"
 ```
-
-
+3. **Create a cron job for consistently tracking for effective capacity planning.**
+```bash
+# Add a cron job to log every 30 minutes:
+sudo crontab -e
+*/30 * * * * $(pwd)/system_monitor.sh
+```
 ---
 
 ## **Task 2: User Management and Access Control**
