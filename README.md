@@ -2,11 +2,11 @@
    
 ## **Project:** Secure, Monitored, and Well-Maintained Development Environment  
 ## Repository Structure
-**🗂️ Directories**
+**🗂️ Directories:**
 - **backups**: Directory containing backup configurations for web servers.
 - **system_monitor_log**: Directory storing log files generated from system monitoring activities.
   
-**📄 Files**
+**📄 Files:**
 - **system_monitor.sh**: Script for monitoring system resources such as CPU, memory, and disk usage.
 - **git_log_push.sh**: Script to log and push Git changes to the repository.
 - **apache_backup.sh**: Script for backing up Apache server configuration and document root.
@@ -234,7 +234,7 @@ echo "------------------------------------" >> "$VERIFY_LOG"
 sudo chmod +x $(pwd)/nginx_backup.sh
 ```
 
-3. **Schedule Cron Jobs:**
+3. **Schedule Cron Jobs.**
 ```bash
 # Edit Sarah’s cron configuration
 sudo crontab -e -u sarah
@@ -249,7 +249,7 @@ sudo crontab -e -u mike
 0 0 * * 2 /home/tanujbhatia/linux_assignment_HeroVired/nginx_backup.sh
 ```
 
-4. **Verify Backup Files and Integrity:**
+4. **Verify Backup Files and Integrity.**
 ```bash
 # List backup files
 sudo ls -lh $(pwd)/backups/
