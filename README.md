@@ -180,7 +180,7 @@ sudo nano $(pwd)/apache_backup.sh
 #!/bin/bash
 
 # Variables
-BACKUP_DIR="/backups"
+BACKUP_DIR="$(pwd)/backups"
 TIMESTAMP=$(date +"%Y-%m-%d")
 BACKUP_FILE="$BACKUP_DIR/apache_backup_$TIMESTAMP.tar.gz"
 VERIFY_LOG="$BACKUP_DIR/apache_backup_verification.log"
@@ -207,7 +207,7 @@ sudo nano $(pwd)/nginx_backup.sh
 #!/bin/bash
 
 # Variables
-BACKUP_DIR="/backups"
+BACKUP_DIR="$(pwd)/backups"
 TIMESTAMP=$(date +"%Y-%m-%d")
 BACKUP_FILE="$BACKUP_DIR/nginx_backup_$TIMESTAMP.tar.gz"
 VERIFY_LOG="$BACKUP_DIR/nginx_backup_verification.log"
