@@ -163,12 +163,11 @@ sudo chage -M 30 -m 1 -W 7 mike
 ```bash
 # create backup folder
 sudo mkdir $(pwd)/backups
-cd $(pwd)/backups
 
 # Assign appropriate permissions:
 sudo chown sarah:sarah $(pwd)/backups
 sudo chown mike:mike $(pwd)/backups
-sudo chmod 700 $(pwd)/backups
+sudo chmod 700 backups
 ```
  
 2. **Create Backup Scripts.**
@@ -283,8 +282,11 @@ ls -lh $(pwd)/backups/
 
 
 - Cron job schedule and backup logs.</br>
-<img width="533" alt="image" src="https://github.com/user-attachments/assets/e266f827-1931-42e8-9768-90106c8a9c54" /></br>
-<img width="546" alt="image" src="https://github.com/user-attachments/assets/d9929910-e9b2-48a0-bcc4-25a105d25b0f" />
+<img width="797" alt="image" src="https://github.com/user-attachments/assets/0db54125-63c9-4317-8640-5ea88f55359c" /> </br>
+<img width="632" alt="image" src="https://github.com/user-attachments/assets/25bcb751-d3f0-463e-89ba-84a9a8a58fac" /> </br>
+
+
+
 
 
 
