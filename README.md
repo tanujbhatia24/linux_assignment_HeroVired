@@ -14,44 +14,45 @@
 
 ### **Implementation Steps:**
 
-1. **Install Monitoring Tools:**
+1. **Install Monitoring Tools (Install htop):**
 ```bash
-# Install htop
-sudo apt install htop -y   # Ubuntu/Debian
-sudo yum install htop -y   # CentOS/RHEL
-
-# Install nmon (alternative)
-sudo apt install nmon -y
+sudo apt install htop -y
 ```
 
-2. **Run Monitoring Tools:**
+2. **Create a bash script for disk usage monitoring, tracking and storing outputs in a log file**
 ```bash
-htop         # Real-time monitoring
-nmon         # Run and select desired metrics
+#!/bin/bash
+
+# Directory for storing logs
+LOG_DIR="$(pwd)/system_monitor"
+LOG_FILE="$LOG_DIR/sys_metrics_$(date +'%Y-%m-%d_%H-%M-%S').log"
+
+# Ensure the log directory exists
+mkdir -p "$LOG_DIR"
+
+# Collecting system metrics
+echo "------ System Metrics: $(date) ------" >> "$LOG_FILE"
+
+# CPU and memory logging
+echo -e "\nCPU and Memory Usage:" >> "$LOG_FILE"
+top -b -n 1 >> "$LOG_FILE"
+
+# Disk usage logging
+echo -e "\nDisk Usage:" >> "$LOG_FILE"
+df -h >> "$LOG_FILE"
+
+# Resource-intensive usage logging
+echo -e "\nTop 5 CPU-Intensive Processes:" >> "$LOG_FILE"
+ps -eo pid,ppid,cmd,%cpu --sort=-%cpu | head -n 6 >> "$LOG_FILE"
+Techo -e "\nTop 5 Memory-Intensive Processes:" >> "$LOG_FILE"
+ps -eo pid,ppid,cmd,%mem --sort=-%mem | head -n 6 >> "$LOG_FILE"
+
+# Clean old logs (older than 7 days)
+find "$LOG_DIR" -type f -name "*.log" -mtime +7 -exec rm {} \;
+
+echo "Log saved to $LOG_FILE"
 ```
 
-3. **Monitor Disk Usage:**
-```bash
-# Display disk space usage
-sudo df -h
-
-# Show disk usage for specific directories
-sudo du -sh /home/*
-```
-
-4. **Identify Resource-Intensive Processes:**
-```bash
-ps aux --sort=-%cpu | head -5      # Top 5 CPU consuming processes
-ps aux --sort=-%mem | head -5      # Top 5 memory consuming processes
-```
-
-5. **Create Monitoring Log:**
-```bash
-# Save disk usage and process details to log
-sudo df -h > /var/log/system_monitor.log
-ps aux --sort=-%cpu | head -5 >> /var/log/system_monitor.log
-ps aux --sort=-%mem | head -5 >> /var/log/system_monitor.log
-```
 
 ---
 
