@@ -1,1 +1,7 @@
 
+Verifying backup: /home/tanujbhatia/linux_assignment_HeroVired/backups/apache_backup_2025-03-22.tar.gz
+var/www/html/
+var/www/html/index.nginx-debian.html
+var/www/html/index.html
+Backup completed: 2025-03-22 22:13:48
+------------------------------------
