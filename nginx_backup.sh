@@ -12,5 +12,5 @@ tar -czf "$BACKUP_FILE" /etc/nginx/ /usr/share/nginx/html/
 # Verify backup integrity
 echo "Verifying backup: $BACKUP_FILE" >> "$VERIFY_LOG"
 tar -tf "$BACKUP_FILE" >> "$VERIFY_LOG"
-echo "Backup completed: $TIMESTAMP" >> "$VERIFY_LOG"
+echo "Backup completed: $(date '+%Y-%m-%d %H:%M:%S')" >> "$VERIFY_LOG"
 echo "------------------------------------" >> "$VERIFY_LOG"
