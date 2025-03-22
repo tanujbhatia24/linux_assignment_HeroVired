@@ -259,7 +259,7 @@ tar -tf /backups/nginx_backup_YYYY-MM-DD.tar.gz
 
 ## **Screenshots:**
 - System monitoring outputs.</br>
-<img width="389" alt="image" src="https://github.com/user-attachments/assets/79ac1ff4-1312-4bd2-bf48-877604c734e4" />
+<img width="389" alt="image" src="https://github.com/user-attachments/assets/79ac1ff4-1312-4bd2-bf48-877604c734e4" /> </br>
 
 - User management terminal commands.</br>
 <img width="540" alt="image" src="https://github.com/user-attachments/assets/d383cb6a-8a77-475e-aa88-661885d7e832" /> </br>
