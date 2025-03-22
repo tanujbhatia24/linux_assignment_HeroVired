@@ -130,7 +130,7 @@ retry = 3                 # Allow 3 retries before failure
 # Enable complexity enforcement
 sudo nano /etc/pam.d/common-password
 
-#Ensure this line is present
+# Ensure this line is present
 password requisite pam_pwquality.so retry=3
 ```
 
