@@ -21,7 +21,7 @@ df -h >> "$LOG_FILE"
 # Resource-intensive usage logging
 echo -e "\nTop 5 CPU-Intensive Processes:" >> "$LOG_FILE"
 ps -eo pid,ppid,cmd,%cpu --sort=-%cpu | head -n 6 >> "$LOG_FILE"
-Techo -e "\nTop 5 Memory-Intensive Processes:" >> "$LOG_FILE"
+echo -e "\nTop 5 Memory-Intensive Processes:" >> "$LOG_FILE"
 ps -eo pid,ppid,cmd,%mem --sort=-%mem | head -n 6 >> "$LOG_FILE"
 
 # Clean old logs (older than 7 days)
