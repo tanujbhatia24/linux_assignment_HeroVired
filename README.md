@@ -178,12 +178,21 @@ sudo nano $(pwd)/apache_backup.sh
 ```
 ```bash
 #!/bin/bash
-BACKUP_DIR="$(pwd)/backups"
-DATE=$(date +"%Y-%m-%d")
-BACKUP_FILE="$BACKUP_DIR/apache_backup_$DATE.tar.gz"
 
-tar -czf $BACKUP_FILE /etc/httpd/ /var/www/html/
-echo "Apache backup completed: $BACKUP_FILE"
+# Variables
+BACKUP_DIR="/backups"
+TIMESTAMP=$(date +"%Y-%m-%d")
+BACKUP_FILE="$BACKUP_DIR/apache_backup_$TIMESTAMP.tar.gz"
+VERIFY_LOG="$BACKUP_DIR/apache_backup_verification.log"
+
+# Backup Apache configuration and document root
+tar -czf "$BACKUP_FILE" /etc/httpd/ /var/www/html/
+
+# Verify backup integrity
+echo "Verifying backup: $BACKUP_FILE" >> "$VERIFY_LOG"
+tar -tf "$BACKUP_FILE" >> "$VERIFY_LOG"
+echo "Backup completed: $TIMESTAMP" >> "$VERIFY_LOG"
+echo "------------------------------------" >> "$VERIFY_LOG"
 ```
 ```bash
 # Make script executable
@@ -196,12 +205,21 @@ sudo nano $(pwd)/nginx_backup.sh
 ```
 ```bash
 #!/bin/bash
-BACKUP_DIR="$(pwd)/backups"
-DATE=$(date +"%Y-%m-%d")
-BACKUP_FILE="$BACKUP_DIR/nginx_backup_$DATE.tar.gz"
 
-tar -czf $BACKUP_FILE /etc/nginx/ /usr/share/nginx/html/
-echo "Nginx backup completed: $BACKUP_FILE"
+# Variables
+BACKUP_DIR="/backups"
+TIMESTAMP=$(date +"%Y-%m-%d")
+BACKUP_FILE="$BACKUP_DIR/nginx_backup_$TIMESTAMP.tar.gz"
+VERIFY_LOG="$BACKUP_DIR/nginx_backup_verification.log"
+
+# Backup Nginx configuration and document root
+tar -czf "$BACKUP_FILE" /etc/nginx/ /usr/share/nginx/html/
+
+# Verify backup integrity
+echo "Verifying backup: $BACKUP_FILE" >> "$VERIFY_LOG"
+tar -tf "$BACKUP_FILE" >> "$VERIFY_LOG"
+echo "Backup completed: $TIMESTAMP" >> "$VERIFY_LOG"
+echo "------------------------------------" >> "$VERIFY_LOG"
 ```
 ```bash
 # Make script executable
@@ -210,24 +228,23 @@ sudo chmod +x $(pwd)/nginx_backup.sh
 
 3. **Schedule Cron Jobs:**
 ```bash
-# Edit cron jobs
-sudo crontab -e
-```
-Add the following lines:
-```bash
-# Run every Tuesday at 12:00 AM
-0 0 * * 2 /usr/local/bin/apache_backup.sh
-0 0 * * 2 /usr/local/bin/nginx_backup.sh
+# Edit Sarah’s cron configuration
+sudo crontab -e -u sarah
+
+# Add the following cron job
+0 0 * * 2 /home/tanujbhatia/linux_assignment_HeroVired/apache_backup.sh
+
+# Edit Mike’s cron configuration
+sudo crontab -e -u mike
+
+# Add the following cron job
+0 0 * * 2 /home/tanujbhatia/linux_assignment_HeroVired/nginx_backup.sh
 ```
 
-3. **Verify Backup Integrity:**
+4. **Verify Backup Integrity:**
 ```bash
 # List backup files
-ls -lh /backups/
-
-# Verify contents of backup
-sudo tar -tzf /backups/apache_backup_$(date +"%Y-%m-%d").tar.gz
-sudo tar -tzf /backups/nginx_backup_$(date +"%Y-%m-%d").tar.gz
+ls -lh $(pwd)/backups/
 ```
 
 ---
