@@ -52,11 +52,24 @@ find "$LOG_DIR" -type f -name "*.log" -mtime +7 -exec rm {} \;
 
 echo "Log saved to $LOG_FILE"
 ```
-3. **Create a cron job for consistently tracking for effective capacity planning.**
+3. **Create a bash script for pushing the logs to github repo.**
 ```bash
-# Add a cron job to log every 30 minutes:
+#!/bin/bash
+
+REPO_DIR="$(pwd)"
+LOG_DIR="$REPO_DIR/system_monitor"
+cd "$REPO_DIR"
+
+git add .
+git commit -m "Add system monitoring logs to git"
+git push origin main
+```
+
+4. **Create a cron job for consistently tracking for effective capacity planning.**
+```bash
+# Add a cron job to push the logs every 30 minutes:
 sudo crontab -e
-*/30 * * * * $(pwd)/system_monitor.sh
+*/30 * * * * $(pwd)/git_log_push.sh
 ```
 ---
 
