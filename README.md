@@ -73,7 +73,7 @@ git push origin main
 ```bash
 # Add a cron job to push the logs every 30 minutes:
 sudo crontab -e
-*/30 * * * * $(pwd)/git_log_push.sh
+*/30 * * * * /home/tanujbhatia/linux_assignment_HeroVired/git_log_push.sh
 ```
 ---
 
