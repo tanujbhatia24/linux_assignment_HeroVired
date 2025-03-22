@@ -240,12 +240,15 @@ sudo crontab -e -u mike
 0 0 * * 2 /home/tanujbhatia/linux_assignment_HeroVired/nginx_backup.sh
 ```
 
-4. **Verify Backup Integrity:**
+4. **Verify Backup Files and Integrity:**
 ```bash
 # List backup files
 ls -lh $(pwd)/backups/
-```
 
+# Verify the contents of the backup
+tar -tf /backups/apache_backup_YYYY-MM-DD.tar.gz
+tar -tf /backups/nginx_backup_YYYY-MM-DD.tar.gz
+```
 ---
 
 ## **Challenges and Solutions:**
