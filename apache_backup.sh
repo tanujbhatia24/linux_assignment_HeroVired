@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-BACKUP_DIR="/backups"
+BACKUP_DIR="$(pwd)/backups"
 TIMESTAMP=$(date +"%Y-%m-%d")
 BACKUP_FILE="$BACKUP_DIR/apache_backup_$TIMESTAMP.tar.gz"
 VERIFY_LOG="$BACKUP_DIR/apache_backup_verification.log"
