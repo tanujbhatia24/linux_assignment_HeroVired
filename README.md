@@ -252,7 +252,7 @@ sudo crontab -e -u mike
 4. **Verify Backup Files and Integrity:**
 ```bash
 # List backup files
-ls -lh $(pwd)/backups/
+sudo ls -lh $(pwd)/backups/
 
 # Verify the contents of the backup
 tar -tf /backups/apache_backup_YYYY-MM-DD.tar.gz
