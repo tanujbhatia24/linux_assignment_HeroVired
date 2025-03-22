@@ -275,13 +275,12 @@ ls -lh $(pwd)/backups/
 
 
 - User management terminal commands.</br>
-<img width="337" alt="image" src="https://github.com/user-attachments/assets/0c9ae9b5-bda5-467f-b74d-2b892b842215" /> </br>
-<img width="521" alt="image" src="https://github.com/user-attachments/assets/fde1b405-4e37-4be1-aaaa-b0c3d95116fc" /> </br>
-<img width="368" alt="image" src="https://github.com/user-attachments/assets/db1d352f-895b-4c81-8a2b-9129e13a298e" /> </br>
-<img width="457" alt="image" src="https://github.com/user-attachments/assets/9a0a1728-81f7-4556-a78e-a16376978296" /> </br>
-<img width="539" alt="image" src="https://github.com/user-attachments/assets/a7826b9b-2b7f-42fb-bb47-069e03c541b2" /> </br>
-<img width="311" alt="image" src="https://github.com/user-attachments/assets/1174191e-e73a-44a4-ad81-7f77cd9fa0a3" /> </br>
-<img width="395" alt="image" src="https://github.com/user-attachments/assets/d899d84c-2416-427c-af3b-93356ee4c2bc" />
+<img width="540" alt="image" src="https://github.com/user-attachments/assets/d383cb6a-8a77-475e-aa88-661885d7e832" /> </br>
+<img width="501" alt="image" src="https://github.com/user-attachments/assets/c43b9941-d81e-4db4-a31b-357d98e10193" /> </br>
+<img width="560" alt="image" src="https://github.com/user-attachments/assets/9d5a7ae9-87a7-4bf2-a75d-355d623a33a9" /> </br>
+<img width="458" alt="image" src="https://github.com/user-attachments/assets/5bb97753-3586-4bb6-ba3a-d2032e2a0fb6" /> </br>
+<img width="557" alt="image" src="https://github.com/user-attachments/assets/0a3ba265-126e-435e-afcf-75613bafd648" /> </br>
+
 
 - Cron job schedule and backup logs.</br>
 <img width="533" alt="image" src="https://github.com/user-attachments/assets/e266f827-1931-42e8-9768-90106c8a9c54" /></br>
