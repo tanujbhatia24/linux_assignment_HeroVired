@@ -275,7 +275,6 @@ tar -tf /backups/nginx_backup_YYYY-MM-DD.tar.gz
 <img width="701" alt="image" src="https://github.com/user-attachments/assets/6f91836b-be12-4e20-9adb-04ebf2b7e479" />
 <img width="939" alt="image" src="https://github.com/user-attachments/assets/ec102642-175c-4467-a45f-b836a80707e4" /> </br>
 
-
 - User management terminal commands.</br>
 <img width="540" alt="image" src="https://github.com/user-attachments/assets/d383cb6a-8a77-475e-aa88-661885d7e832" /> </br>
 <img width="501" alt="image" src="https://github.com/user-attachments/assets/c43b9941-d81e-4db4-a31b-357d98e10193" /> </br>
@@ -283,16 +282,10 @@ tar -tf /backups/nginx_backup_YYYY-MM-DD.tar.gz
 <img width="458" alt="image" src="https://github.com/user-attachments/assets/5bb97753-3586-4bb6-ba3a-d2032e2a0fb6" /> </br>
 <img width="557" alt="image" src="https://github.com/user-attachments/assets/0a3ba265-126e-435e-afcf-75613bafd648" /> </br>
 
-
 - Cron job schedule and backup logs.</br>
 <img width="797" alt="image" src="https://github.com/user-attachments/assets/0db54125-63c9-4317-8640-5ea88f55359c" /> </br>
 <img width="632" alt="image" src="https://github.com/user-attachments/assets/25bcb751-d3f0-463e-89ba-84a9a8a58fac" /> </br>
-
-
-
-
-
-
+<img width="734" alt="image" src="https://github.com/user-attachments/assets/17d046fb-9c70-48fe-8fb4-cd74e3240cef" />
 ---
 
 ## **Backup Files and Logs:**
