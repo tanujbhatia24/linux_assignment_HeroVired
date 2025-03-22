@@ -19,7 +19,7 @@
 sudo apt install htop -y
 ```
 
-2. **Create a bash script for disk usage monitoring, tracking and storing outputs in a log file**
+2. **Create a bash script (system_monitor.sh) for disk usage monitoring, tracking and storing outputs in a log file**
 ```bash
 #!/bin/bash
 
@@ -52,7 +52,7 @@ find "$LOG_DIR" -type f -name "*.log" -mtime +7 -exec rm {} \;
 
 echo "Log saved to $LOG_FILE"
 ```
-3. **Create a bash script for pushing the logs to github repo.**
+3. **Create a bash script (git_log_push.sh) for pushing the logs to github repo.**
 ```bash
 #!/bin/bash
 
