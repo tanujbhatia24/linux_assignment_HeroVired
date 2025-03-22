@@ -25,3 +25,29 @@ usr/share/nginx/html/
 usr/share/nginx/html/index.html
 Backup completed: 2025-03-22 22:13:45
 ------------------------------------
+Verifying backup: /home/tanujbhatia/linux_assignment_HeroVired/backups/nginx_backup_2025-03-22.tar.gz
+etc/nginx/
+etc/nginx/modules-enabled/
+etc/nginx/fastcgi.conf
+etc/nginx/win-utf
+etc/nginx/fastcgi_params
+etc/nginx/modules-available/
+etc/nginx/mime.types
+etc/nginx/uwsgi_params
+etc/nginx/koi-utf
+etc/nginx/scgi_params
+etc/nginx/koi-win
+etc/nginx/sites-available/
+etc/nginx/sites-available/default
+etc/nginx/conf.d/
+etc/nginx/snippets/
+etc/nginx/snippets/snakeoil.conf
+etc/nginx/snippets/fastcgi-php.conf
+etc/nginx/nginx.conf
+etc/nginx/sites-enabled/
+etc/nginx/sites-enabled/default
+etc/nginx/proxy_params
+usr/share/nginx/html/
+usr/share/nginx/html/index.html
+Backup completed: 2025-03-22 22:40:54
+------------------------------------
