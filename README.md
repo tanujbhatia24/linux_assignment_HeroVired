@@ -14,12 +14,12 @@
 
 ### **Implementation Steps:**
 
-1. **Install Monitoring Tools (Install htop):**
+1. **Install Monitoring Tools (Install htop).**
 ```bash
 sudo apt install htop -y
 ```
 
-2. **Create a bash script (system_monitor.sh) for disk usage monitoring, tracking and storing outputs in a log file**
+2. **Create a bash script (system_monitor.sh) for disk usage monitoring, tracking and storing outputs in a log file.**
 ```bash
 #!/bin/bash
 
@@ -86,7 +86,7 @@ sudo crontab -e
 
 ### **Implementation Steps:**
 
-1. **Create and Validate User Accounts:**
+1. **Create and Validate User Accounts.**
 ```bash
 # Add new users
 sudo adduser sarah
@@ -101,7 +101,7 @@ id sarah
 id mike
 ```
 
-2. **Create Isolated Directories:**
+2. **Create Isolated Directories.**
 ```bash
 # Create workspace directories
 sudo mkdir -p /home/sarah/workspace
@@ -116,7 +116,7 @@ sudo chmod 700 /home/sarah/workspace
 sudo chmod 700 /home/mike/workspace
 ```
 
-3. **Enforce Password complexity Policies:**
+3. **Enforce Password complexity Policies.**
 ```bash
 # Edit the password complexity rules
 sudo nano /etc/security/pwquality.conf
@@ -134,7 +134,7 @@ sudo nano /etc/pam.d/common-password
 password requisite pam_pwquality.so retry=3
 ```
 
-4. **Enforce Expiration Policy:**
+4. **Enforce Expiration Policy.**
 ```bash
 # Edit the password policy settings
 sudo nano /etc/login.defs
@@ -159,14 +159,26 @@ sudo chage -M 30 -m 1 -W 7 mike
 
 ### **Implementation Steps:**
 
-1. **Create Backup Script:**
+1. **Create Backup Folder to store the Backup Configuration for Web Servers.**
 ```bash
-# Apache Backup (Sarah)
-sudo nano /usr/local/bin/apache_backup.sh
+# create backup folder
+sudo mkdir $(pwd)/backups
+cd $(pwd)/backups
+
+# Assign appropriate permissions:
+sudo chown sarah:sarah $(pwd)/backups
+sudo chown mike:mike $(pwd)/backups
+sudo chmod 700 $(pwd)/backups
+```
+ 
+2. **Create Backup Scripts.**
+```bash
+# Apache Backup Sarah (apache_backup.sh)
+sudo nano $(pwd)/apache_backup.sh
 ```
 ```bash
 #!/bin/bash
-BACKUP_DIR="/backups"
+BACKUP_DIR="$(pwd)/backups"
 DATE=$(date +"%Y-%m-%d")
 BACKUP_FILE="$BACKUP_DIR/apache_backup_$DATE.tar.gz"
 
@@ -175,16 +187,16 @@ echo "Apache backup completed: $BACKUP_FILE"
 ```
 ```bash
 # Make script executable
-sudo chmod +x /usr/local/bin/apache_backup.sh
+sudo chmod +x $(pwd)/apache_backup.sh
 ```
 
 ```bash
-# Nginx Backup (Mike)
-sudo nano /usr/local/bin/nginx_backup.sh
+# Nginx Backup Mike (nginx_backup.sh)
+sudo nano $(pwd)/nginx_backup.sh
 ```
 ```bash
 #!/bin/bash
-BACKUP_DIR="/backups"
+BACKUP_DIR="$(pwd)/backups"
 DATE=$(date +"%Y-%m-%d")
 BACKUP_FILE="$BACKUP_DIR/nginx_backup_$DATE.tar.gz"
 
@@ -193,10 +205,10 @@ echo "Nginx backup completed: $BACKUP_FILE"
 ```
 ```bash
 # Make script executable
-sudo chmod +x /usr/local/bin/nginx_backup.sh
+sudo chmod +x $(pwd)/nginx_backup.sh
 ```
 
-2. **Schedule Cron Jobs:**
+3. **Schedule Cron Jobs:**
 ```bash
 # Edit cron jobs
 sudo crontab -e
