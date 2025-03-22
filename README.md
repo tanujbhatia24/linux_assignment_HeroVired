@@ -86,14 +86,19 @@ sudo crontab -e
 
 ### **Implementation Steps:**
 
-1. **Create User Accounts:**
+1. **Create and Validate User Accounts:**
 ```bash
+# Add new users
 sudo adduser sarah
 sudo adduser mike
 
 # Set secure passwords
 sudo passwd sarah
 sudo passwd mike
+
+# Verify user creation
+id sarah
+id mike
 ```
 
 2. **Create Isolated Directories:**
@@ -111,33 +116,38 @@ sudo chmod 700 /home/sarah/workspace
 sudo chmod 700 /home/mike/workspace
 ```
 
-3. **Enforce Password Policies:**
+3. **Enforce Password complexity Policies:**
 ```bash
-# Install pwquality module
-sudo apt install libpam-pwquality -y   # Ubuntu/Debian
-sudo yum install pam_pwquality -y      # CentOS/RHEL
-
-# Edit password policy
+# Edit the password complexity rules
 sudo nano /etc/security/pwquality.conf
 
-# Set policies:
-minlen = 12
-minclass = 3
-difok = 4
-maxrepeat = 3
-maxclassrepeat = 4
-retry = 3
+# Add the following configuration
+minlen = 12               # Minimum password length
+minclass = 3              # At least 3 character classes (uppercase, lowercase, digits, symbols)
+maxrepeat = 3             # Prevent consecutive repeating characters
+retry = 3                 # Allow 3 retries before failure
 
-enforce_for_root
+# Enable complexity enforcement
+sudo nano /etc/pam.d/common-password
+
+#Ensure this line is present
+password requisite pam_pwquality.so retry=3
 ```
 
 4. **Enforce Expiration Policy:**
 ```bash
-# Set password expiration to 30 days
-sudo chage -M 30 sarah
-sudo chage -M 30 mike
-```
+# Edit the password policy settings
+sudo nano /etc/login.defs
 
+# Add or modify the following lines:
+PASS_MAX_DAYS   30      # Password expires after 30 days
+PASS_MIN_DAYS   1       # Minimum 1 day between password changes
+PASS_WARN_AGE   7       # Warn users 7 days before expiration
+
+# Apply the policy to the new users
+sudo chage -M 30 -m 1 -W 7 sarah
+sudo chage -M 30 -m 1 -W 7 mike
+```
 ---
 
 ## **Task 3: Backup Configuration for Web Servers**
